@@ -53,4 +53,4 @@ class Clock {
 // //  today.split("T")[1].split(":")
 
 // let thisdate = Date()
-// let hms = thisdate.split("T")[1].split(":") //[hh,mm,ss]
+// {let hms = thisdate.split("T")[1].split(":") //[hh,mm,ss]}
