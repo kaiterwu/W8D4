@@ -9,18 +9,15 @@ new Date()
 */
 
 class Clock {
-    constructer() {
-        let thisdate = Date().toString()
-        let hms = thisdate.split(" ")[4].split(":") //[hh,mm,ss]
-        this.hours = hms[0]
-        this.minutes = hms[1]
-        this.seconds = hms[2]
+    constructor() {
+        let thisdate = new Date();
+        // let hms = thisdate.split(" ")[4].split(":") //[hh,mm,ss]
+        this.hours = thisdate.getHours();
+        this.minutes = thisdate.getMinutes();
+        this.seconds = thisdate.getSeconds();
          
-            printTime()
-            setinterval(_tick,1000)
-           
-    
-        
+        this.printTime();
+        setInterval(this._tick.bind(this) ,1000) ;   
     }
 
 
@@ -41,16 +38,17 @@ class Clock {
             this.minutes == 0 
         }
         if (this.hours === 24 ) {
-            this.hours =0 
+            this.hours = 0 
         }
-        return printTime()
+        // debugger
+        this.printTime()
     }
 
 
 
 }
 
-const clock = new Clock();  
+// const clock = new Clock();  
 
 // //  today.split("T")[1].split(":")
 
